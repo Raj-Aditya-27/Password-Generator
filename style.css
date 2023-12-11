@@ -95,6 +95,14 @@
     width: 23vw;
     padding: 0 2vh;
     margin: 0 1.5vh;
+    display: flex;
+    column-gap: 14vw;
+}
+
+.strength-display{
+    width: 1.5vw;
+    border-radius: 100%;
+    background-color: gainsboro;
 }
 
 .generatePassword{
