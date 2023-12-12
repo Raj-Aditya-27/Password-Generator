@@ -15,14 +15,17 @@
 }
 
 .nested-container {
-    height: 75vh;
+    height: 80vh;
     width: 26vw;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     row-gap: 4vh;
     border-radius: 5vh;
     box-shadow: inset 5px 5px 12px #5638c2,
-        5px 5px 12px rgba(0, 0, 0, 0.16)
+        5px 5px 12px rgba(0, 0, 0, 0.16);
+    padding: 0 auto;
 }
 
 .heading {
@@ -32,7 +35,6 @@
     align-items: center;
     font-size: 4vh;
     font-weight: bold;
-    color: white;
     font-family: Roboto;
     margin: 3vh auto 0 auto;
 }
@@ -49,18 +51,36 @@
     border-radius: 1vh;
     background-color: #ffffff;
     font-family: Roboto;
+    padding-left: 3vh;
 }
 
 .generated-password {
     width: 18vw;
     display: flex;
     align-items: center;
-    font-size: 1em;
+    font-size: 1em;   
 }
 
 .copy {
     display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: 100%;
+    width: 4vw;
     align-items: center;
+    row-gap: 2%;
+}
+
+#copyMsg{
+    font-size: 0.8em;
+    border-radius: 5vh;
+    width: 100%;
+    background-color: #5638c2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
 }
 
 .password-required-elements {
@@ -92,7 +112,7 @@
 }
 
 .password-strength {
-    width: 23vw;
+    width: 90%;
     padding: 0 2vh;
     margin: 0 1.5vh;
     display: flex;
@@ -100,9 +120,10 @@
 }
 
 .strength-display {
-    width: 1.5vw;
+    width: 2vw;
     border-radius: 100%;
     background-color: gainsboro;
+    box-shadow: 0px 0 25px rgba(220, 220, 220, 1);
 }
 
 .generatePassword {
@@ -117,19 +138,24 @@ button {
     border-radius: 5vh;
     border: none;
     font-family: Roboto;
+    font-weight: bold;
 }
 
 input[type=checkbox] {
-    accent-color: #5638c2;
+    accent-color: yellow;
 }
 
 button:hover {
     background-color: #dcdfe3;
 }
 
+div{
+    padding: 0 0.5%;
+}
+
 @media screen and (max-width:600px) {
     .nested-container {
-        height: 75vh;
+        height: 80vh;
         width: 65vw;
     }
 
@@ -142,6 +168,7 @@ button:hover {
         width: 60vw;
         height: 7vh;
         margin: 0 auto;
+        padding: 0px;
     }
 
     .password-required-elements {
@@ -173,15 +200,58 @@ button:hover {
         margin-top: 2vh;
     }
 
+
     button {
         width: 55vw;
+    }
+
+    .strength-display {
+        
+        /* border-radius: 100%; */
+        background-color: gainsboro;
+        box-shadow: 0px 0 15px rgba(220, 220, 220, 1);
+        width: 5vw;
+    }
+
+    .password-strength {
+        width: 60vw;
+        column-gap: 28vw;
+    }
+    
+    #copyMsg{
+        font-size: 0.8em;
+        border-radius: 5vh;
+        width: 9vw;
+        background-color: #5638c2;
+        color: white;
+        margin-bottom: 0.3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copy{
+        margin-right: 1%;
+    }
+
+    .password-generator-display {
+        display: flex;
+        width: 60vw;
+        align-items:center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-left: 0.4vh;
+    }
+    
+    .password-length-box {
+        padding: 1vh;
     }
 }
 
 @media screen and (max-width:1025px) and (min-width:601px) {
     .nested-container {
-        height: 78vh;
-        width: 50vw;
+        height: 80vh;
+        width: 55vw;
     }
 
     .heading {
@@ -190,7 +260,7 @@ button:hover {
     }
 
     .password-generator-display {
-        width: 42vw;
+        width: 48vw;
         height: 7vh;
         margin: 0 auto;
     }
@@ -217,11 +287,11 @@ button:hover {
 
     .requirements {
         width: 40vw;
-        height: 7vh;
         padding: 0;
         margin: 0 2vh;
-        font-size: 1.2rem;
+        font-size: 1.3em;
         align-items: center;
+        height: 15%;
     }
 
     .generatePassword {
@@ -230,5 +300,18 @@ button:hover {
 
     button {
         width: 40vw;
+        height: 4vh;
+    }
+
+    .copy {
+        width: 6vw;
+    }
+
+    .password-strength{
+        font-size: 1.2em;
+    }
+
+    .strength-display{
+        width: 8%;
     }
 }

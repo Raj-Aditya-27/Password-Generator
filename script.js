@@ -15,7 +15,7 @@ const generateBtn = document.getElementsByClassName('generatePassword')[0];
 
 let checkBoxCount = 0;
 let password = "";
-let passwordKaLength = 1;
+let passwordKaLength = 10;
 
 handleSlider();
 
@@ -26,7 +26,6 @@ function handleSlider() {
 
 function setIndicator(color) {
     strengthIndicator.style.backgroundColor = color;
-    console.log(color);
 }
 
 
