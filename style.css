@@ -42,13 +42,14 @@
 .password-generator-display {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     height: 6vh;
-    margin: 0 1.5vh;
+    margin: 0 1vh;
     color: black;
     border-radius: 8px;
     background-color: #ffffff;
     padding: 0 3vh;
+    width: 90%;
 }
 
 .generated-password {
@@ -239,7 +240,7 @@ div{
 @media screen and (max-width:1025px) and (min-width:601px) {
     .nested-container {
         height: 85vh;
-        width: 70vw;
+        width: auto;
     }
 
     .heading {
