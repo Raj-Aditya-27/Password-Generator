@@ -62,13 +62,13 @@ function calcStrength() {
     if (symbolsCaseCheck.checked) hasSym = true;
 
     if (hasUpper && hasLower && (hasNum || hasSym) && passwordKaLength >= 8) {
-        setIndicator("#0f0");
+        setIndicator("#019f55");
     }
     else if ((hasLower || hasUpper) && (hasNum || hasSym) && passwordKaLength >= 6) {
-        setIndicator("#ff0");
+        setIndicator("#FFC94A");
     }
     else {
-        setIndicator("#f00");
+        setIndicator("#E72929");
     }
 }
 
